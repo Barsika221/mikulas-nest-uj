@@ -28,7 +28,7 @@ export class ToysController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.toysService.remove(+id);
+  async remove(@Param('id') id: string) {
+    return await this.toysService.remove(+id);
   }
 }
